@@ -1,0 +1,19 @@
+{
+    "name": "good-lucky-api",
+    "version": "1.0.0",
+    "description": "Projeto Faculdade Invest 5 Semestre - Aplicativo de jogos",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarkCamposg22/good-lucky-app.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/MarkCamposg22/good-lucky-app/issues"
+    },
+    "homepage": "https://github.com/MarkCamposg22/good-lucky-app#readme",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
