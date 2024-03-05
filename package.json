@@ -2,7 +2,7 @@
     "name": "good-lucky-api",
     "version": "1.0.0",
     "description": "Projeto Faculdade Invest 5 Semestre - Aplicativo de jogos",
-    "main": "index.js",
+    "main": "src/server.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/MarkCamposg22/good-lucky-app.git"
@@ -30,6 +30,7 @@
     },
     "dependencies": {
         "@prisma/client": "^5.10.2",
+        "dotenv": "^16.4.5",
         "express": "^4.18.2"
     }
 }
