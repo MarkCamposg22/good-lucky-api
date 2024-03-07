@@ -1,0 +1,8 @@
+export const userRegisterService = async () => {
+    //recebe os dados do controller
+    //validar email
+    //criptografar senha
+    //criar usuario no banco de dados
+    //gerar token
+    //retornar token criado
+}
