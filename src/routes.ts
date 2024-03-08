@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { UserLoginController } from './controllers/UserLoginController';
-import { UserRegisterController } from './controllers/UserRegisterController';
-import { UserBalanceController } from './controllers/UserBalanceController'; // Importe o novo controlador
+import { UserLoginController } from './controllers/user-login-controller';
+import { UserRegisterController } from './controllers/user-register-controller';
+import { UserBalanceController } from './controllers/user-balance-controller'; // Importe o novo controlador
 
 const routes = Router();
 
