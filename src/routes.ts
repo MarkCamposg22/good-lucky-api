@@ -1,7 +1,11 @@
 import { Router } from 'express';
 
+import { UserRegisterController } from './presentation/controllers';
+
 const routes = Router();
 
-// TODO: criar rotas
+const userRegiterController = new UserRegisterController();
+
+routes.post('/register', userRegiterController.handle);
 
 export { routes };
