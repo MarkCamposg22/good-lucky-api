@@ -1,6 +1,7 @@
 import { Response } from 'express';
 
 import { HttpStatusCode } from '../../domain';
+import { UnauthorizedError } from '../../presentation/errors';
 
 export class HttpHelper {
     constructor(private readonly response: Response) { }
@@ -17,8 +18,12 @@ export class HttpHelper {
         return this.response.status(HttpStatusCode.BAD_REQUEST).json({ error: error.message });
     }
 
-    unauthorized(error: Error): Response<Error> {
-        return this.response.status(HttpStatusCode.UNAUTHORIZED).json({ error: error.message });
+    unauthorized(): Response<Error> {
+        return this.response.status(HttpStatusCode.UNAUTHORIZED).json(new UnauthorizedError());
+    }
+
+    notFound(error: Error): Response<Error> {
+        return this.response.status(HttpStatusCode.NOT_FOUND).json({ error: error.message });
     }
 
     internalError(error: Error): Response<Error> {
