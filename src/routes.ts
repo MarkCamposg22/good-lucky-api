@@ -1,19 +1,11 @@
-import express, { Router } from 'express';
-import { UserLoginController } from './controllers/user-login-controller';
+import { Router } from 'express';
 
-const app = express();
+import { UserRegisterController } from './presentation/controllers';
+
 const routes = Router();
 
-// Rota para a página de login
-routes.get('/login', UserLoginController.login);
+const userRegiterController = new UserRegisterController();
 
-// Prefixa todas as rotas com '/api'
-app.use('/api', routes);
+routes.post('/register', userRegiterController.handle);
 
-// Inicie o servidor na porta 3000
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
-
-export { routes }
+export { routes };
